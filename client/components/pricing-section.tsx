@@ -2,38 +2,37 @@ export default function PricingSection() {
   return (
     <section
       aria-labelledby="pricing-section-title"
-      className="py-16 sm:py-20"
+      className="bg-paper py-16 sm:py-20"
     >
-      <div className="mx-auto max-w-6xl px-5 sm:px-8">
-        <div className="max-w-2xl">
+      <div className="mx-auto grid max-w-7xl gap-8 px-5 sm:px-8 md:grid-cols-[0.8fr_1.2fr] md:gap-16 lg:px-12">
+        <div className="max-w-sm">
+          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-olive">
+            Getting started
+          </p>
           <h2
-            className="text-3xl font-semibold tracking-tight text-slate-950"
+            className="mt-4 font-display text-3xl leading-tight tracking-tight text-ink sm:text-4xl"
             id="pricing-section-title"
           >
-            Simple ways to get started
+            Start where you are.
           </h2>
-          <p className="mt-3 text-base leading-7 text-slate-600">
+          <p className="mt-4 text-base leading-7 text-muted">
             Start for free, with a family plan available when you need it.
           </p>
         </div>
-        <div className="mt-8 grid gap-4 sm:grid-cols-2">
-          <article className="rounded-2xl border border-slate-200 p-6 sm:p-8">
-            <h3 className="text-lg font-semibold text-slate-900">
-              Free to start
-            </h3>
-            <p className="mt-2 text-sm leading-6 text-slate-600">
+        <dl className="divide-y divide-rule border-y border-rule">
+          <div className="grid gap-2 py-5 sm:grid-cols-[10rem_1fr] sm:gap-6 sm:py-6">
+            <dt className="font-display text-xl text-olive">Free to start</dt>
+            <dd className="text-sm leading-6 text-muted">
               Begin exploring the app without an upfront price.
-            </p>
-          </article>
-          <article className="rounded-2xl border border-emerald-900/15 bg-emerald-50/60 p-6 sm:p-8">
-            <h3 className="text-lg font-semibold text-slate-900">
-              Family plan
-            </h3>
-            <p className="mt-2 text-sm leading-6 text-slate-600">
+            </dd>
+          </div>
+          <div className="grid gap-2 py-5 sm:grid-cols-[10rem_1fr] sm:gap-6 sm:py-6">
+            <dt className="font-display text-xl text-olive">Family plan</dt>
+            <dd className="text-sm leading-6 text-muted">
               An available plan for two people, with a private space for each.
-            </p>
-          </article>
-        </div>
+            </dd>
+          </div>
+        </dl>
       </div>
     </section>
   );

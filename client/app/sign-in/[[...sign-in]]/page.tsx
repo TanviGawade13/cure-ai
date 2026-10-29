@@ -16,9 +16,6 @@ export default function SignInPage() {  //defines the component next js will ren
         <h1 className="mt-2 text-3xl font-semibold tracking-tight text-slate-950">
           Sign in to your account
         </h1>
-        <p className="mt-2 text-sm text-slate-600">
-          Continue to your private dashboard.
-        </p>
       </div>
       <Suspense
         fallback={

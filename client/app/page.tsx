@@ -8,14 +8,16 @@ import SiteFooter from "@/components/site-footer";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white text-slate-900">
+    <>
       <SiteHeader />
-      <HeroSection />
-      <HowItWorks />
-      <FamilySection />
-      <TrustSection />
-      <PricingSection />
+      <main className="min-h-screen bg-paper text-ink">
+        <HeroSection />
+        <HowItWorks />
+        <FamilySection />
+        <TrustSection />
+        <PricingSection />
+      </main>
       <SiteFooter />
-    </main>
+    </>
   );
 }

@@ -20,35 +20,38 @@ export default function HowItWorks() {
   return (
     <section
       aria-labelledby="how-it-works-title"
-      className="bg-emerald-50/60 py-16 sm:py-20"
+      className="border-y border-rule bg-sage/50 py-16 sm:py-20"
     >
-      <div className="mx-auto max-w-6xl px-5 sm:px-8">
-        <div className="max-w-2xl">
+      <div className="mx-auto grid max-w-7xl gap-10 px-5 sm:px-8 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20 lg:px-12">
+        <div className="max-w-sm">
+          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-olive">
+            A simple process
+          </p>
           <h2
-            className="text-3xl font-semibold tracking-tight text-slate-950"
+            className="mt-4 font-display text-3xl leading-tight tracking-tight text-ink sm:text-4xl"
             id="how-it-works-title"
           >
             How it works
           </h2>
-          <p className="mt-3 text-base leading-7 text-slate-600">
+          <p className="mt-4 text-base leading-7 text-muted">
             A simple path from a lab report to a more informed conversation.
           </p>
         </div>
-        <ol className="mt-9 grid gap-4 md:grid-cols-3">
+        <ol className="divide-y divide-olive/20 border-y border-olive/20">
           {steps.map((step) => (
             <li
-              className="rounded-2xl border border-emerald-900/10 bg-white p-6"
+              className="grid gap-3 py-5 sm:grid-cols-[3.5rem_1fr] sm:gap-5 sm:py-6"
               key={step.number}
             >
-              <span className="text-sm font-semibold tracking-wide text-emerald-800">
-                {step.number}
+              <span className="font-display text-lg italic text-olive">
+                {step.number}.
               </span>
-              <h3 className="mt-4 text-lg font-semibold text-slate-900">
-                {step.title}
-              </h3>
-              <p className="mt-2 text-sm leading-6 text-slate-600">
-                {step.description}
-              </p>
+              <div>
+                <h3 className="text-lg font-medium text-ink">{step.title}</h3>
+                <p className="mt-1 text-sm leading-6 text-muted">
+                  {step.description}
+                </p>
+              </div>
             </li>
           ))}
         </ol>

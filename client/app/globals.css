@@ -1,26 +1,48 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --paper: #f5f4ed;
+  --surface: #fffefb;
+  --sage: #e4e9e0;
+  --sage-deep: #d3ddd1;
+  --olive: #354838;
+  --olive-dark: #293a2d;
+  --charcoal: #272b25;
+  --muted: #596157;
+  --rule: #d8dbd1;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-paper: var(--paper);
+  --color-surface: var(--surface);
+  --color-sage: var(--sage);
+  --color-sage-deep: var(--sage-deep);
+  --color-olive: var(--olive);
+  --color-olive-dark: var(--olive-dark);
+  --color-ink: var(--charcoal);
+  --color-muted: var(--muted);
+  --color-rule: var(--rule);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-display: Georgia, "Times New Roman", serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--paper);
+  color: var(--charcoal);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+::selection {
+  background: var(--sage-deep);
+  color: var(--charcoal);
+}
+
+:focus-visible {
+  outline: 2px solid var(--olive);
+  outline-offset: 3px;
 }

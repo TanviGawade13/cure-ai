@@ -16,9 +16,7 @@ export default function SignUpPage() {
         <h1 className="mt-2 text-3xl font-semibold tracking-tight text-slate-950">
           Create your account
         </h1>
-        <p className="mt-2 text-sm text-slate-600">
-          Sign up to get your own private dashboard.
-        </p>
+
       </div>
       <Suspense
         fallback={

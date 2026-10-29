@@ -1,25 +1,38 @@
 export default function FamilySection() {
   return (
-    <section
-      aria-labelledby="family-section-title"
-      className="py-16 sm:py-20"
-    >
-      <div className="mx-auto grid max-w-6xl gap-8 px-5 sm:px-8 md:grid-cols-2 md:items-center">
-        <div>
-          <p className="text-sm font-semibold text-emerald-800">
-            Made for families
+    <section aria-labelledby="family-section-title" className="bg-paper py-16 sm:py-24">
+      <div className="mx-auto grid max-w-7xl gap-10 px-5 sm:px-8 md:grid-cols-[1fr_0.9fr] md:items-center md:gap-16 lg:px-12">
+        <div className="max-w-lg">
+          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-olive">
+            Room for someone you care about
           </p>
           <h2
-            className="mt-3 text-3xl font-semibold tracking-tight text-slate-950"
+            className="mt-4 font-display text-3xl leading-tight tracking-tight text-ink sm:text-4xl"
             id="family-section-title"
           >
-            One family plan. Two private spaces.
+            A little more peace of mind, together.
           </h2>
-        </div>
-        <div className="rounded-2xl border border-emerald-900/10 bg-emerald-50/60 p-6 sm:p-8">
-          <p className="text-base leading-7 text-slate-700">
+          <p className="mt-4 text-base leading-7 text-muted">
             One family plan covers two people. Each person has a private space,
             and you choose what health information to share.
+          </p>
+        </div>
+        <div className="border-y border-olive/20 py-5">
+          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.14em] text-muted">
+            One plan, two individual spaces
+          </p>
+          <div className="grid grid-cols-2 gap-3 sm:gap-4">
+            <div className="border border-rule bg-surface px-4 py-5 sm:px-5">
+              <p className="font-display text-lg text-ink">Your space</p>
+              <p className="mt-1 text-sm text-muted">Private to you</p>
+            </div>
+            <div className="border border-rule bg-surface px-4 py-5 sm:px-5">
+              <p className="font-display text-lg text-ink">Their space</p>
+              <p className="mt-1 text-sm text-muted">Private to them</p>
+            </div>
+          </div>
+          <p className="mt-4 text-sm leading-6 text-olive">
+            Sharing is your choice.
           </p>
         </div>
       </div>
