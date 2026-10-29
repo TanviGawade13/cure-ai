@@ -1,15 +1,15 @@
-import { SignIn } from "@clerk/nextjs";
-import Link from "next/link";
-import { Suspense } from "react";
+import { SignIn } from "@clerk/nextjs";  //this gets the ready made sign in component from clerk
+import Link from "next/link";  //adds next.js navigation to another page 
+import { Suspense } from "react";   //this lets react display a fallback while the child component is loading 
 
-export default function SignInPage() {
+export default function SignInPage() {  //defines the component next js will render for this route 
   return (
     <main className="flex min-h-screen flex-col items-center bg-[#f8f7f4] px-5 py-8 sm:py-12">
       <Link
         className="mb-10 text-sm font-semibold tracking-tight text-emerald-950"
-        href="/"
-      >
-        ← Back to Cure AI
+        href="/"  //this is the link back to the landing page 
+      > 
+        ← Back to Cure AI 
       </Link>
       <div className="mb-7 text-center">
         <p className="text-sm font-medium text-emerald-800">Welcome back</p>
